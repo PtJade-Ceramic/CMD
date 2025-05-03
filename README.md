@@ -96,7 +96,7 @@ To do this:
    ```
 6. (Optional) Start this program to check whether it has been repaired successfully.
 
-#### Depleting
+#### Deleting
 
 **Warning: Many processes rely on this program, which can't be recovered from the recycle bin if deleted in the following way. Don't do this.**
 
@@ -133,15 +133,15 @@ Start this program at:
 
 ##### Starting another [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells)
 
-This program is built in for all versions of Windows but it may be broken or deleted if unable to start it, and has to be repaired, whose difficulty is starting another [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells). A way to do this is to start another instance of this program from an installation medium for the OS. To do this:
+This program is built in for all versions of Windows but may be broken or deleted if unable to start it, and has to be repaired, whose difficulty is starting another [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells). A way to do this is to start another instance of this program from an installation medium for the OS. To do this:
 
 1. (Necessary if the user doesn't have an installation medium for the OS or isn't sure about the integrity of that he has owned) [Create installation media for the OS](https://support.microsoft.com/en-us/windows/create-installation-media-for-windows-99a58364-8c02-206f-aa6f-40c3b507420d).
 2. Keep the installation medium plugged in and go to `Settings` > `Windows Update` > `Advanced options` > (in `Others`) `Recovery` > (in `Recovery options` > `Advanced recovery`) `Reboot immediately`.
 3. In the reboot page, click `Repair this computer` > `Command Prompt`.
 
-##### Repairing in another [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells)
+##### fixing in another [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells)
 
-To repair this program:
+To fix this program:
 
 1. (Necessary if the user isn't sure about the integrity of the local image of the OS) Run the following commands in sequence as administrator [to keep the integrity of the local image of the OS](http://go.microsoft.com/fwlink/?LinkId=243077):
    ```
@@ -167,11 +167,11 @@ To repair this program:
    ```
 6. (Optional) Start this program to check whether it has been repaired successfully.
 
-#### Depleting
+#### Deleting
 
 **Warning: This program can't be recovered from the recycle bin if deleted in the following way. Don't do this.**
 
-Try repairing this program instead if there is something wrong with it.
+Try fixing this program instead if there is something wrong with it.
 
 To do this:
 
