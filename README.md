@@ -19,7 +19,7 @@ In a [command-line shell](https://learn.microsoft.com/en-us/windows-server/admin
 - Type the command and press Enter; or
 - Paste the command followed by a carriage return defined by [ISO/IEC 6429](https://www.iso.org/standard/12782.html).
 
-Some commands can only be run as administrator. To run them, the user must start another process, also an instance of a [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells), as administrator if the current one hasn't been run as administrator by running the following command if the new one is Command Prompt for example and PowerShell has been installed:
+Some commands can only be run as an administrator. To run them, the user must start another process, also an instance of a [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells), as an administrator if the current one hasn't been run as an administrator by running the following command if the new one is Command Prompt, for example, and PowerShell has been installed:
 
 ```
 PowerShell -Command "Start-Process cmd.exe -Verb RunAs"
@@ -58,21 +58,21 @@ Start this program at:
 %windir%\System32\cmd.exe
 ```
 
-#### Repairing
+#### Fixing
 
 ##### Starting another [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells)
 
-This program is built in for all versions of Windows but it may be broken or [deleted](#deleting) if unable to start it, and has to be repaired, whose difficulty is starting another [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells). A way to do this is to start another instance of this program from an installation medium for the OS. To do this:
+This program is built in for all versions of Windows but it may be broken or [deleted](#deleting) if unable to start it, and has to be fixed, whose difficulty is starting another [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells). A way to do this is to start another instance of this program from an installation medium for the OS. To do this:
 
-1. (Necessary if the user doesn't have an installation medium for the OS or isn't sure about the integrity of that he has owned) [Create installation media for the OS](https://support.microsoft.com/en-us/windows/create-installation-media-for-windows-99a58364-8c02-206f-aa6f-40c3b507420d).
+1. (Necessary if the user doesn't have an installation medium for the OS or isn't sure about the integrity of what he has) [Create installation media for the OS](https://support.microsoft.com/en-us/windows/create-installation-media-for-windows-99a58364-8c02-206f-aa6f-40c3b507420d).
 2. Keep the installation medium plugged in and go to `Settings` > `Windows Update` > `Advanced options` > (in `Others`) `Recovery` > (in `Recovery options` > `Advanced recovery`) `Reboot immediately`.
-3. In the reboot page, click `Repair this computer` > `Command Prompt`.
+3. In the reboot page, click `Fix this computer` > `Command Prompt`.
 
-##### Repairing in another [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells)
+##### Fixing in another [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells)
 
 To do this:
 
-1. (Necessary if the user isn't sure about the integrity of the local image of the OS) Run the following commands in sequence as administrator [to keep the integrity of the local image of the OS](http://go.microsoft.com/fwlink/?LinkId=243077):
+1. (Necessary if the user isn't sure about the integrity of the local image of the OS) Run the following commands in sequence as an administrator [to keep the integrity of the local image of the OS](http://go.microsoft.com/fwlink/?LinkId=243077):
    ```
    DISM.exe /Online /Cleanup-Image /CheckHealth
    DISM.exe /Online /Cleanup-Image /ScanHealth
@@ -86,21 +86,21 @@ To do this:
    ```
    sfc /verifyfile=<%windir%>\System32\cmd.exe
    ```
-4. Run the following command [to scan the integrity of this program and attempts to repair any problems if they're detected](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/sfc), with `<%windir%>`, following the [_Command-Line Syntax Key_](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/command-line-syntax-key), replaced with the absolute directory of the OS:
+4. Run the following command [to scan the integrity of this program and attempt to fix any problems if they're detected](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/sfc), with `<%windir%>`, following the [_Command-Line Syntax Key_](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/command-line-syntax-key), replaced with the absolute directory of the OS:
    ```
    sfc /scanfile=<%windir%>\System32\cmd.exe
    ```
-5. Run the following command [to scan the integrity of this program, together with all the other protected system files, and repair those with problems if possible](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/sfc):
+5. Run the following command [to scan the integrity of this program, together with all the other protected system files, and fix those with problems if possible](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/sfc):
    ```
    sfc /scannow
    ```
-6. (Optional) Start this program to check whether it has been repaired successfully.
+6. (Optional) Start this program to check whether it has been fixed successfully.
 
 #### Deleting
 
 **Warning: Many processes rely on this program, which can't be recovered from the recycle bin if deleted in the following way. Don't do this.**
 
-Try repairing this program instead if there is something wrong with it.
+Try fixing this program instead if something is wrong with it.
 
 To do this:
 
@@ -129,21 +129,21 @@ Start this program at:
 %SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe
 ```
 
-#### Repairing
+#### Installing
 
 ##### Starting another [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells)
 
-This program is built in for all versions of Windows but may be broken or deleted if unable to start it, and has to be repaired, whose difficulty is starting another [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells). A way to do this is to start another instance of this program from an installation medium for the OS. To do this:
+This program is built in for all versions of Windows but may be broken or [deleted](#deleting-1) if unable to start it, and has to be fixed, whose difficulty is starting another [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells). A way to do this is to start another instance of this program from an installation medium for the OS. To do this:
 
-1. (Necessary if the user doesn't have an installation medium for the OS or isn't sure about the integrity of that he has owned) [Create installation media for the OS](https://support.microsoft.com/en-us/windows/create-installation-media-for-windows-99a58364-8c02-206f-aa6f-40c3b507420d).
+1. (Necessary if the user doesn't have an installation medium for the OS or isn't sure about the integrity of what he has) [Create installation media for the OS](https://support.microsoft.com/en-us/windows/create-installation-media-for-windows-99a58364-8c02-206f-aa6f-40c3b507420d).
 2. Keep the installation medium plugged in and go to `Settings` > `Windows Update` > `Advanced options` > (in `Others`) `Recovery` > (in `Recovery options` > `Advanced recovery`) `Reboot immediately`.
-3. In the reboot page, click `Repair this computer` > `Command Prompt`.
+3. In the reboot page, click `Fix this computer` > `Command Prompt`.
 
 ##### fixing in another [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells)
 
 To fix this program:
 
-1. (Necessary if the user isn't sure about the integrity of the local image of the OS) Run the following commands in sequence as administrator [to keep the integrity of the local image of the OS](http://go.microsoft.com/fwlink/?LinkId=243077):
+1. (Necessary if the user isn't sure about the integrity of the local image of the OS) Run the following commands in sequence as an administrator [to keep the integrity of the local image of the OS](http://go.microsoft.com/fwlink/?LinkId=243077):
    ```
    DISM.exe /Online /Cleanup-Image /CheckHealth
    DISM.exe /Online /Cleanup-Image /ScanHealth
@@ -157,15 +157,15 @@ To fix this program:
    ```
    sfc /verifyfile=<%windir%>\System32\cmd.exe
    ```
-4. Run the following command [to scan the integrity of this program and attempts to repair any problems if they're detected](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/sfc), with `<%windir%>`, following the [_Command-Line Syntax Key_](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/command-line-syntax-key), replaced with the absolute directory of the OS:
+4. Run the following command [to scan the integrity of this program and attempt to fix any problems if they're detected](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/sfc), with `<%windir%>`, following the [_Command-Line Syntax Key_](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/command-line-syntax-key), replaced with the absolute directory of the OS:
    ```
    sfc /scanfile=<%windir%>\System32\cmd.exe
    ```
-5. Run the following command [to scan the integrity of this program, together with all the other protected system files, and repair those with problems if possible](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/sfc):
+5. Run the following command [to scan the integrity of this program, together with all the other protected system files, and fix those with problems if possible](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/sfc):
    ```
    sfc /scannow
    ```
-6. (Optional) Start this program to check whether it has been repaired successfully.
+6. (Optional) Start this program to check whether it has been fixed successfully.
 
 #### Deleting
 
@@ -192,6 +192,6 @@ To do this:
 
 #### Installing
 
-This program comes installed by default in every Windows, starting with Windows 7 SP1 and Windows Server 2008 R2 SP1.
+This program is installed by default on every Windows, starting with Windows 7 SP1 and Windows Server 2008 R2 SP1.
 
 See [_Installing Windows PowerShell_](https://learn.microsoft.com/en-us/previous-versions/powershell/scripting/windows-powershell/install/installing-windows-powershell).
