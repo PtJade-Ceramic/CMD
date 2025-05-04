@@ -133,7 +133,7 @@ Start this program at:
 
 ##### Starting another [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells)
 
-This program is installed by default on every Windows, starting with Windows 7 SP1 and Windows Server 2008 R2 SP1[^1] but may be broken or [deleted](#deleting-1) if unable to start it, and has to be fixed, whose difficulty is starting another [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells). A way to do this is to start another instance of this program from an installation medium for the OS. To do this:
+This program is installed by default on every Windows, starting with Windows 7 SP1 and Windows Server 2008 R2 SP1 but may be broken or [deleted](#deleting-1) if unable to start it, and has to be fixed, whose difficulty is starting another [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells). A way to do this is to start another instance of this program from an installation medium for the OS. To do this:
 
 1. (Necessary if the user doesn't have an installation medium for the OS or isn't sure about the integrity of what he has) [Create installation media for the OS](https://support.microsoft.com/en-us/windows/create-installation-media-for-windows-99a58364-8c02-206f-aa6f-40c3b507420d).
 2. Keep the installation medium plugged in and go to `Settings` > `Windows Update` > `Advanced options` > (in `Others`) `Recovery` > (in `Recovery options` > `Advanced recovery`) `Reboot immediately`.
@@ -195,5 +195,3 @@ To do this:
 This program is installed by default on every Windows, starting with Windows 7 SP1 and Windows Server 2008 R2 SP1.
 
 See [_Installing Windows PowerShell_](https://learn.microsoft.com/en-us/previous-versions/powershell/scripting/windows-powershell/install/installing-windows-powershell).
-
-[^1]
