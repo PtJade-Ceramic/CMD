@@ -62,15 +62,15 @@ Start this program at:
 
 ##### Starting another [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells)
 
-This program is built in for all versions of Windows but it may be broken or [deleted](#deleting) if unable to start it, and has to be fixed, whose difficulty is starting another [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells). A way to do this is to start another instance of this program from an installation medium for the OS. To do this:
+This program is built in for all versions of Windows. It can be broken or [deleted](#deleting) however if unable to run. For fixing the problem, it can be hard to start another [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells) if the user can open neither this program nor other [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells). Only as an administrator may the user do this. Such a user should do this by starting another instance of this program from an installation medium for the OS in the following steps:
 
 1. (Necessary if the user doesn't have an installation medium for the OS or isn't sure about the integrity of what he has) [Create installation media for the OS](https://support.microsoft.com/en-us/windows/create-installation-media-for-windows-99a58364-8c02-206f-aa6f-40c3b507420d).
 2. Keep the installation medium plugged in and go to `Settings` > `Windows Update` > `Advanced options` > (in `Others`) `Recovery` > (in `Recovery options` > `Advanced recovery`) `Reboot immediately`.
 3. In the reboot page, click `Fix this computer` > `Command Prompt`.
 
-##### Fixing in another [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells)
+##### Fixing also in an instance of [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells)
 
-To do this:
+Only as an administrator may the user fix this program. Such a user should do this in the following steps in which the commands given has to be run also in an instance of [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells). Such shell should be started as [recommended](#starting-another-command-line-shell) if no instance of this program can be running as an administrator.
 
 1. (Necessary if the user isn't sure about the integrity of the local image of the OS) Run the following commands in sequence as an administrator [to keep the integrity of the local image of the OS](http://go.microsoft.com/fwlink/?LinkId=243077):
    ```
@@ -98,14 +98,14 @@ To do this:
 
 #### Deleting
 
-**Warning: Many processes rely on this program, which can't be recovered from the recycle bin if deleted in the following way. Don't do this.**
+**Warning: Many processes rely on this program. It can't be recovered from the recycle bin if deleted in the following way. Don't do this.**
 
-Try fixing this program instead if something is wrong with it.
+The user should try [fixing this program](#fixing) instead if something is wrong with it.
 
-To do this:
+It is deprecated to delete this program. Only as an administrator may the user do this. Such a user should do this in the following steps:
 
 1. Go to `%windir%\System32`.
-2. Run `cmd.exe` as administrator.
+2. Run `cmd.exe` as an administrator.
 3. Run the following command [to enable an administrator to recover access to this program](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/takeown):
    ```
    takeown /f cmd.exe
@@ -131,17 +131,19 @@ Start this program at:
 
 #### Installing
 
+This program is installed by default on every Windows, starting with Windows 7 SP1 and Windows Server 2008 R2 SP1.
+
+See [_Installing Windows PowerShell_](https://learn.microsoft.com/en-us/previous-versions/powershell/scripting/windows-powershell/install/installing-windows-powershell).
+
+#### Fixing
+
 ##### Starting another [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells)
 
-This program is installed by default on every Windows, starting with Windows 7 SP1 and Windows Server 2008 R2 SP1 but may be broken or [deleted](#deleting-1) if unable to start it, and has to be fixed, whose difficulty is starting another [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells). A way to do this is to start another instance of this program from an installation medium for the OS. To do this:
+It can be broken or [deleted](#deleting-1) however if unable to run. Only as an administrator may the user fix it. To do this, such a user must [run commands also in a command-line shell](#fixing-also-in-an-instance-of-command-line-shell-1). Such shell can be either Command Prompt or [something else that can run](#starting-another-command-line-shell).
 
-1. (Necessary if the user doesn't have an installation medium for the OS or isn't sure about the integrity of what he has) [Create installation media for the OS](https://support.microsoft.com/en-us/windows/create-installation-media-for-windows-99a58364-8c02-206f-aa6f-40c3b507420d).
-2. Keep the installation medium plugged in and go to `Settings` > `Windows Update` > `Advanced options` > (in `Others`) `Recovery` > (in `Recovery options` > `Advanced recovery`) `Reboot immediately`.
-3. In the reboot page, click `Fix this computer` > `Command Prompt`.
+##### Fixing also in an instance of [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells)
 
-##### fixing in another [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells)
-
-To fix this program:
+Only as an administrator may the user fix this program. Such a user should do this in the following steps in which the commands given has to be run also in an instance of [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells). Such shell should be started as [recommended](#starting-another-command-line-shell-1) if no instance of this program can be running as an administrator.
 
 1. (Necessary if the user isn't sure about the integrity of the local image of the OS) Run the following commands in sequence as an administrator [to keep the integrity of the local image of the OS](http://go.microsoft.com/fwlink/?LinkId=243077):
    ```
@@ -155,11 +157,11 @@ To fix this program:
    ```
 3. Run the following command [to verify the integrity of this program](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/sfc) with `<%windir%>`, following the [_Command-Line Syntax Key_](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/command-line-syntax-key), replaced with the absolute directory of the OS, copied in last step if the user isn't sure about it:
    ```
-   sfc /verifyfile=<%windir%>\System32\cmd.exe
+   sfc /verifyfile=<%windir%>\System32\powershell.exe
    ```
 4. Run the following command [to scan the integrity of this program and attempt to fix any problems if they're detected](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/sfc), with `<%windir%>`, following the [_Command-Line Syntax Key_](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/command-line-syntax-key), replaced with the absolute directory of the OS:
    ```
-   sfc /scanfile=<%windir%>\System32\cmd.exe
+   sfc /scanfile=<%windir%>\System32\powershell.exe
    ```
 5. Run the following command [to scan the integrity of this program, together with all the other protected system files, and fix those with problems if possible](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/sfc):
    ```
@@ -171,9 +173,9 @@ To fix this program:
 
 **Warning: This program can't be recovered from the recycle bin if deleted in the following way. Don't do this.**
 
-Try fixing this program instead if there is something wrong with it.
+Try [fixing this program](#fixing-1) instead if something is wrong with it.
 
-To do this:
+It is deprecated to delete this program. Only as an administrator may the user do this. Such a user should do this in the following steps:
 
 1. Go to `%windir%\System32\WindowsPowerShell\v1.0`.
 2. Run `powersehll.exe` as administrator.
@@ -189,9 +191,3 @@ To do this:
    ```
    del powershell.exe
    ```
-
-#### Installing
-
-This program is installed by default on every Windows, starting with Windows 7 SP1 and Windows Server 2008 R2 SP1.
-
-See [_Installing Windows PowerShell_](https://learn.microsoft.com/en-us/previous-versions/powershell/scripting/windows-powershell/install/installing-windows-powershell).
