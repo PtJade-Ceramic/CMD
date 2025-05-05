@@ -188,9 +188,9 @@ See the [related official documentation](https://learn.microsoft.com/en-us/windo
 
 #### Displaying the text string by entering the command to open a batch file
 
-[Hello.bat](Hello.bat) in this repository is a batch file desplaying the string in the console. However the user can find the console crash without seeing the string clearly if opening the file directly. To avoid such a situation, the user should open the file in a [command-line shell][command-line shell] in the following steps:
+[Hello.bat][Hello] in this repository is a batch file desplaying the string in the console. However the user can find the console crash without seeing the string clearly if opening the file directly. To avoid such a situation, the user should open the file in a [command-line shell][command-line shell] in the following steps:
 
-1. In the command-line shell, go to the folder in which is [the file](Hello%20World.bat), which is the folder of the repository, if the user has cloned it, which is recommended, or the folder into which the user has downloaded the file, in either of the following methods:
+1. In the command-line shell, go to the folder in which is [the file][Hello], which is the folder of the repository, if the user has cloned it, which is recommended, or the folder into which the user has downloaded the file, in either of the following methods:
    - Start a [command-line shell](#starting) and go to the desired folder.
    - Go to the desired folder with [File Explorer](https://support.microsoft.com/windows/file-explorer-in-windows-ef370130-1cca-9dc5-e0df-2f7416fe1cb1), right click in the blank area, and click `Open in Terminal`. If the choice disappears, search for `Terminal` on the computer. Uninstall it if able to be found. Then install it again from [Microsoft Store](https://apps.microsoft.com/detail/9N0DX20HK701).
 2. Enter the name of the file to execute it:
@@ -251,3 +251,4 @@ Available from: https://www.forbesindia.com/interview/special/brian-kernighan-no
 [install Windows PowerShell]: https://learn.microsoft.com/powershell/scripting/windows-powershell/install/installing-windows-powershell
 [PowerShell]: https://learn.microsoft.com/powershell
 [Command-Line Syntax Key]: https://learn.microsoft.com/windows-server/administration/windows-commands/command-line-syntax-key
+[Hello]: Hello.bat
