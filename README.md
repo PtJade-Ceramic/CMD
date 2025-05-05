@@ -2,7 +2,7 @@
 
 ## Foreword
 
-This document was drafted following the editorial rules of the [ISO/IEC Directives, Part 2](https://www.iso.org/directives), however, containing modifications, mostly simplification, not specified.
+This document was drafted following the editorial rules of the [ISO/IEC Directives, Part 2](https://www.iso.org/directives) containing modifications, mostly simplification, not specified.
 
 ## Introduction
 
@@ -36,13 +36,13 @@ The following documents are referred to in the text in such a way that some or a
 - [ISO/IEC 2382, _Information technology — Vocabulary_](https://www.iso.org/standard/63598.html)
 - [_Create installation media for Windows_](https://support.microsoft.com/en-us/windows/create-installation-media-for-windows-99a58364-8c02-206f-aa6f-40c3b507420d)
 - [_Windows commands_](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands)
-- [_Installing Windows PowerShell_](https://learn.microsoft.com/en-us/previous-versions/powershell/scripting/windows-powershell/install/installing-windows-powershell)
+- [_Installing Windows PowerShell_](https://learn.microsoft.com/powershell/scripting/windows-powershell/install/installing-windows-powershell)
 
 ## Terms and definitions
 
 For this document, the terms and definitions given in [ISO/IEC 2382, _Information technology — Vocabulary_](https://www.iso.org/standard/63598.html) and [Windows commands](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands) apply.
 
-## Ways to install and delete [command-line shells](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells)
+## Ways to install, start, and delete [command-line shells](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells)
 
 ### Introduction of the command-line shells
 
@@ -62,7 +62,7 @@ Start this program at:
 
 ##### Starting another [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells)
 
-This program is built in for all versions of Windows. It can be broken or [deleted](#deleting) however if unable to run. For fixing the problem, it can be hard to start another [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells) if the user can open neither this program nor other [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells). Only as an administrator may the user do this. Such a user should do this by starting another instance of this program from an installation medium for the OS in the following steps:
+This program is built in for all versions of Windows. It can be broken or [deleted](#deleting), however, if unable to run. For fixing the problem, it can be hard to start another [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells) if the user can open neither this program nor another [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells). Only as an administrator may the user do this. Such a user should do this by starting another instance of this program from an installation medium for the OS in the following steps:
 
 1. (Necessary if the user doesn't have an installation medium for the OS or isn't sure about the integrity of what he has) [Create installation media for the OS](https://support.microsoft.com/en-us/windows/create-installation-media-for-windows-99a58364-8c02-206f-aa6f-40c3b507420d).
 2. Keep the installation medium plugged in and go to `Settings` > `Windows Update` > `Advanced options` > (in `Others`) `Recovery` > (in `Recovery options` > `Advanced recovery`) `Reboot immediately`.
@@ -70,7 +70,7 @@ This program is built in for all versions of Windows. It can be broken or [delet
 
 ##### Fixing also in an instance of [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells)
 
-Only as an administrator may the user fix this program. Such a user should do this in the following steps in which the commands given has to be run also in an instance of [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells). Such shell should be started as [recommended](#starting-another-command-line-shell) if no instance of this program can be running as an administrator.
+Only as an administrator may the user fix this program. Such a user should do this in the following steps, in which the commands given have to be run also in an instance of [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells). Such a shell should be started as [recommended](#starting-another-command-line-shell) if no instances of this program can be running as an administrator.
 
 1. (Necessary if the user isn't sure about the integrity of the local image of the OS) Run the following commands in sequence as an administrator [to keep the integrity of the local image of the OS](http://go.microsoft.com/fwlink/?LinkId=243077):
    ```
@@ -98,9 +98,9 @@ Only as an administrator may the user fix this program. Such a user should do th
 
 #### Deleting
 
-**Warning: Many processes rely on this program. It can't be recovered from the recycle bin if deleted in the following way. Don't do this.**
+**Warning: Don't do this. It can't be recovered from the recycle bin if deleted in the following way. Many processes rely on this program.**
 
-The user should try [fixing this program](#fixing) instead if something is wrong with it.
+If something is wrong with the program, the user should try [fixing this program](#fixing) instead.
 
 It is deprecated to delete this program. Only as an administrator may the user do this. Such a user should do this in the following steps:
 
@@ -131,19 +131,37 @@ Start this program at:
 
 #### Installing
 
-This program is installed by default on every Windows, starting with Windows 7 SP1 and Windows Server 2008 R2 SP1.
+##### Ways
 
-See [_Installing Windows PowerShell_](https://learn.microsoft.com/en-us/previous-versions/powershell/scripting/windows-powershell/install/installing-windows-powershell).
+This program is [installed by default on every Windows, starting with Windows 7 SP1 and Windows Server 2008 R2 SP1](https://learn.microsoft.com/powershell/scripting/install/powershell-support-lifecycle).
+
+**Warning: The user can't fix an instance of this program on Windows by installing one in a way different from how the one to fix is installed because neither of them is equivalent.**
+
+See [_Installing Windows PowerShell_](https://learn.microsoft.com/powershell/scripting/windows-powershell/install/installing-windows-powershell) to install this program on Windows.
+
+The user may also [install this program on Linux and macOS](https://learn.microsoft.com/powershell/scripting/install/installing-powershell).
+
+##### Differences among [ways on Windows](https://learn.microsoft.com/powershell/scripting/windows-powershell/install/installing-windows-powershell)
+
+The following table illustrates how instances of this program installed on Windows in ways other than that done by default are equivalent to neither each other nor the default one.
+
+| Way | Installed location |
+| --- | --- |
+| [WinGet](https://learn.microsoft.com/powershell/scripting/install/installing-powershell-on-windows#winget) | `"%ProgramFiles%\PowerShell\<version>\pwsh.exe" -WorkingDirectory ~` |
+| [MSI](https://learn.microsoft.com/powershell/scripting/install/installing-powershell-on-windows#msi) | `%ProgramFiles%\PowerShell\PowerShell` by default but can be changed |
+| [ZIP](https://learn.microsoft.com/powershell/scripting/install/installing-powershell-on-windows#zip) | `<unzip>\PowerShell-<version>-<platform>\pwsh.exe` in which `<unzip>` is the location the user chooses to unzip the package to and `<version>` and `<platform>` are the installed version of and the platform on which running this program |
+| [.NET](https://learn.microsoft.com/powershell/scripting/install/installing-powershell-on-windows#dotnet) | `$HOME\.dotnet\tools\pwsh.exe` |
+| [Microsoft Store](https://learn.microsoft.com/powershell/scripting/install/installing-powershell-on-windows#msstore) | Sandbox |
 
 #### Fixing
 
 ##### Starting another [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells)
 
-It can be broken or [deleted](#deleting-1) however if unable to run. Only as an administrator may the user fix it. To do this, such a user must [run commands also in a command-line shell](#fixing-also-in-an-instance-of-command-line-shell-1). Such shell can be either Command Prompt or [something else that can run](#starting-another-command-line-shell).
+This program can be broken or [deleted](#deleting-1) if unable to run. Only as an administrator may the user fix it. To do this, such a user must [run commands also in a command-line shell](#fixing-also-in-an-instance-of-command-line-shell-1). Such a shell can be either Command Prompt or [something else that can run](#starting-another-command-line-shell).
 
 ##### Fixing also in an instance of [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells)
 
-Only as an administrator may the user fix this program. Such a user should do this in the following steps in which the commands given has to be run also in an instance of [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells). Such shell should be started as [recommended](#starting-another-command-line-shell-1) if no instance of this program can be running as an administrator.
+Only as an administrator may the user fix this program. Such a user should do this in the following steps, in which the commands given have to be run also in an instance of [command-line shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands#command-line-shells). Such a shell should be started as [recommended](#starting-another-command-line-shell-1) if no instances of this program can be running as an administrator.
 
 1. (Necessary if the user isn't sure about the integrity of the local image of the OS) Run the following commands in sequence as an administrator [to keep the integrity of the local image of the OS](http://go.microsoft.com/fwlink/?LinkId=243077):
    ```
@@ -157,11 +175,11 @@ Only as an administrator may the user fix this program. Such a user should do th
    ```
 3. Run the following command [to verify the integrity of this program](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/sfc) with `<%windir%>`, following the [_Command-Line Syntax Key_](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/command-line-syntax-key), replaced with the absolute directory of the OS, copied in last step if the user isn't sure about it:
    ```
-   sfc /verifyfile=<%windir%>\System32\powershell.exe
+   sfc /verifyfile=<%windir%>\System32\WindowsPowerShell\v1.0\powershell.exe
    ```
 4. Run the following command [to scan the integrity of this program and attempt to fix any problems if they're detected](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/sfc), with `<%windir%>`, following the [_Command-Line Syntax Key_](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/command-line-syntax-key), replaced with the absolute directory of the OS:
    ```
-   sfc /scanfile=<%windir%>\System32\powershell.exe
+   sfc /scanfile=<%windir%>\System32\WindowsPowerShell\v1.0\powershell.exe
    ```
 5. Run the following command [to scan the integrity of this program, together with all the other protected system files, and fix those with problems if possible](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/sfc):
    ```
@@ -173,7 +191,7 @@ Only as an administrator may the user fix this program. Such a user should do th
 
 **Warning: This program can't be recovered from the recycle bin if deleted in the following way. Don't do this.**
 
-Try [fixing this program](#fixing-1) instead if something is wrong with it.
+Try [fixing this program](#fixing-1) if something is wrong with it.
 
 It is deprecated to delete this program. Only as an administrator may the user do this. Such a user should do this in the following steps:
 
@@ -191,3 +209,49 @@ It is deprecated to delete this program. Only as an administrator may the user d
    ```
    del powershell.exe
    ```
+
+## Programming practices
+
+### Displaying a text string
+
+The following text string is classic for beginners to try to display by programming ([Prasad, 2014](#prasad-2014)).
+
+```
+Hello, World!
+```
+
+The user should run the following command to display the string:
+
+```
+echo Hello, World!
+```
+
+## References
+
+### Prasad, 2014
+
+Creator: PRASAD, Shishir [articles available from: https://www.forbesindia.com/author/shishir-prasad].
+
+Title of part: _Brian Kernighan: No one Thought C Would Become So Big_.
+
+Title of the host serial: _Forbes India_.
+
+Format: Web page [Farrier type: online. File format: HTML].
+
+Edition: Updated.
+
+Publisher location: Mumbai.
+
+Publisher name: Network18 Media & Investments Limited.
+
+Date of publication: 2011-11-03 [updated on: 2014-02-27].
+
+Issue: 2011-11-18.
+
+Copyright: Network18 Media & Investments Limited. All rights reserved.
+
+Date of citation: 2025-05-05.
+
+[OCLC: 1458713602](https://search.worldcat.org/en/title/1458713602).
+
+Available from: https://www.forbesindia.com/interview/special/brian-kernighan-no-one-thought-c-would-become-so-big/29982/1.
