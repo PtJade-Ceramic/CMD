@@ -1,4 +1,4 @@
-# Programming exercises — Windows Commands
+# Programming practice — Windows Commands
 
 ## Foreword
 
@@ -212,7 +212,9 @@ It is deprecated to delete this program. Only as an administrator may the user d
 
 ## Programming practices
 
-### Displaying a text string
+### Displaying the text string
+
+#### To-display text string classic for programming beginners
 
 The following text string is classic for beginners to try to display by programming ([Prasad, 2014](#prasad-2014)).
 
@@ -220,11 +222,19 @@ The following text string is classic for beginners to try to display by programm
 Hello, World!
 ```
 
-The user should run the following command to display the string:
+#### Displaying the text string by entering the command without preparing a file
+
+The user should run the following command to display the string without preparing a file:
 
 ```
 echo Hello, World!
 ```
+
+#### Turning on or off the command echoing feature
+
+See the [related official documentation](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/echo) for turning on or off  and checking the state of the command echoing feature.
+
+#### Displaying the text string by entering the command to open a batch file
 
 ## References
 
