@@ -14,7 +14,9 @@ Commands for Windows are derived from MS-DOS 1.0, [code of some of whose later v
 
 [The creator][creator] is not a native English writer, and is willing to listen to criticism on his writing and correct any grammar mistakes.
 
-In a [command-line shell][command-line shell], to run a command:
+Some content of this file is based on a [list of tutorials on Windows Command Line](https://www.youtube.com/playlist?list=PL6gx4Cwl9DGDV6SnbINlVUd0o2xT4JbMu) [(Roberts, 2016)](#roberts-2016) for which thanks should be said to the creator.
+
+The user should run a command in a [command-line shell][command-line shell] in either of the following ways:
 
 - Type the command and press Enter; or
 - Paste the command followed by a carriage return defined by [ISO/IEC 6429](https://www.iso.org/standard/12782.html).
@@ -212,49 +214,17 @@ See the [official documentation related to this command](https://learn.microsoft
 
 ## References
 
+### Roberts, 2016
+
+ROBERTS, Bucky [[GitHub](https://github.com) Account at: https://github.com/buckyroberts]. _Windows Command Line Tutorials_. Video list. Mountain View, California: Google LLC, 2016-01-10. YouTube, https://youtube.com/playlist?list=PL6gx4Cwl9DGDV6SnbINlVUd0o2xT4JbMu. [2025-05-07].
+
 ### Wheeler, 2022
 
-Creator: WHEELER, Sean [[GitHub](https://github.com) Account at: https://github.com/sdwheeler].
-
-Title: _Installing Windows PowerShell_.
-
-Date of material: 2022-10-25.
-
-Format: Web page [Farrier type: online. File format: HTML].
-
-Name of the host archive: Previous versions of PowerShell (available from: https://learn.microsoft.com/en-us/previous-versions/powershell/scripting).
-
-Online host: Microsoft Learn (available from: https://learn.microsoft.com).
-
-Available from: Microsoft Learn, https://learn.microsoft.com/previous-versions/powershell/scripting/windows-powershell/install/installing-windows-powershell.
+WHEELER, Sean [[GitHub](https://github.com) Account at: https://github.com/sdwheeler]. _Installing Windows PowerShell_. 2022-10-25. Web page [Online, HTML]. Previous versions of PowerShell (available from: https://learn.microsoft.com/en-us/previous-versions/powershell/scripting). Microsoft Learn (available from: https://learn.microsoft.com). Microsoft Learn, https://learn.microsoft.com/previous-versions/powershell/scripting/windows-powershell/install/installing-windows-powershell.
 
 ### Prasad, 2014
 
-Creator: PRASAD, Shishir [articles available from: https://www.forbesindia.com/author/shishir-prasad].
-
-Title: _Brian Kernighan: No one Thought C Would Become So Big_.
-
-Title of the host serial: _Forbes India_.
-
-Format: Web page [Farrier type: online. File format: HTML].
-
-Edition: Updated.
-
-Publisher location: Mumbai.
-
-Publisher name: Network18 Media & Investments Limited.
-
-Date of publication: 2011-11-03 [updated on: 2014-02-27].
-
-Issue: 2011-11-18.
-
-Copyright: Network18 Media & Investments Limited. All rights reserved.
-
-Date of citation: 2025-05-05.
-
-[OCLC: 1458713602](https://search.worldcat.org/en/title/1458713602).
-
-Available from: https://www.forbesindia.com/interview/special/brian-kernighan-no-one-thought-c-would-become-so-big/29982/1.
+PRASAD, Shishir [articles available from: https://www.forbesindia.com/author/shishir-prasad]. _Brian Kernighan: No one Thought C Would Become So Big_. _Forbes India_. Web page [online, HTML]. Updated. Mumbai, Network18 Media & Investments Limited. 2011-11-03 [updated on 2014-02-27]. Issue 2011-11-18. Copyright Network18 Media & Investments Limited. All rights reserved [2025-05-05]. [OCLC: 1458713602](https://search.worldcat.org/en/title/1458713602). https://www.forbesindia.com/interview/special/brian-kernighan-no-one-thought-c-would-become-so-big/29982/1.
 
 
 [command-line shell]: https://learn.microsoft.com/windows-server/administration/windows-commands/windows-commands#command-line-shells
