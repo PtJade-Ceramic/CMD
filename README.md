@@ -164,17 +164,23 @@ It is deprecated to delete either of the [command-line shells][command-line shel
 
 ## Programming practices
 
-### Displaying the text string
+### Display text
 
-#### To-display text string classic for programming beginners
+#### Command echoing
 
-The following text string is classic for beginners to try to display by programming ([Prasad, 2014](#prasad-2014)).
+See the [official documentation on related command](https://learn.microsoft.com/windows-server/administration/windows-commands/echo) for turning on or off  and checking the state of the command echoing feature.
+
+#### Displaying a spesific string
+
+##### To-display string classic for programming beginners
+
+The following string is classic for beginners to try to display by programming ([Prasad, 2014](#prasad-2014)).
 
 ```
 Hello, World!
 ```
 
-#### Displaying the string by entering the command without preparing a file
+##### Displaying the string by entering the command without preparing a file
 
 The user should run the following command to display the string without preparing a file:
 
@@ -182,11 +188,7 @@ The user should run the following command to display the string without preparin
 echo Hello, World!
 ```
 
-#### Turning on or off the command echoing feature
-
-See the [related official documentation](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/echo) for turning on or off  and checking the state of the command echoing feature.
-
-#### Displaying the text string by entering the command to open a batch file
+##### Displaying the text string by entering the command to open a batch file
 
 [Hello.bat][Hello] in this repository is a batch file desplaying the string in the console. However the user can find the console crash without seeing the string clearly if opening the file directly. To avoid such a situation, the user should open the file in a [command-line shell][command-line shell] in the following steps:
 
@@ -197,6 +199,16 @@ See the [related official documentation](https://learn.microsoft.com/en-us/windo
    ```
    Hello.bat
    ```
+
+#### Displaying the content of a text file
+
+The user should run the following command to display the code in [Hello.bat][Hello] after going to its location:
+
+```
+type Hello.bat
+```
+
+See the [official documentation related to this command](https://learn.microsoft.com/windows-server/administration/windows-commands/type) for more information.
 
 ## References
 
