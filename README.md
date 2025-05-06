@@ -216,7 +216,7 @@ See the [official documentation related to this command](https://learn.microsoft
 
 ### Roberts, 2016
 
-ROBERTS, Bucky [[GitHub](https://github.com) Account at: https://github.com/buckyroberts]. _Windows Command Line Tutorials_. Video list. Mountain View, California: Google LLC, 2016-01-10. YouTube, https://youtube.com/playlist?list=PL6gx4Cwl9DGDV6SnbINlVUd0o2xT4JbMu. [2025-05-07].
+ROBERTS, Bucky [[GitHub](https://github.com) Account at: https://github.com/buckyroberts]. _Windows Command Line Tutorials_. Video list. Mountain View, California: Google LLC, 2016-01-10. YouTube, https://youtube.com/playlist?list=PL6gx4Cwl9DGDV6SnbINlVUd0o2xT4JbMu [also avaailable from https://www.bilibili.com/video/BV1Yb411H769]. [2025-05-07].
 
 ### Wheeler, 2022
 
