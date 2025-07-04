@@ -21,7 +21,7 @@ The user should enter a command in a [command-line shell][command-line shell] in
 - Type the command and press Enter; or
 - Paste the command followed by a carriage return defined by [ISO/IEC 6429](https://www.iso.org/standard/12782.html).
 
-Some commands can only be entered as an administrator. To do this, the user must start another process, also an instance of a [command-line shell][command-line shell], as an administrator if the current one hasn't been run as an administrator by entering the following command if the new one is Command Prompt, for example, and PowerShell has been installed:
+Some commands may only be run as an administrator. To do this, the user must start another process, also an instance of a [command-line shell][command-line shell], as an administrator if the current one hasn't been run as an administrator by entering the following command if the new one is Command Prompt, for example, and PowerShell has been installed:
 
 ```
 PowerShell -Command "Start-Process cmd.exe -Verb RunAs"
@@ -42,7 +42,7 @@ The following documents are referred to in the text in such a way that some or a
 
 ## Terms and definitions
 
-For this document, the terms and definitions given in [ISO/IEC 2382, _Information technology — Vocabulary_](https://www.iso.org/standard/63598.html) and [Windows commands][commands for Windows] apply.
+For this document, the terms and definitions given in [ISO/IEC 2382](https://www.iso.org/standard/63598.html) and [Windows commands][commands for Windows] apply.
 
 ISO and IEC maintain terminology databases for use in standardization at the following addresses:
 
@@ -220,7 +220,7 @@ The following string is classic for beginners to try to display by programming (
 Hello, World!
 ```
 
-##### Display of the string by entering the command without preparing a file
+##### Display of the string by entering a command without preparing a file
 
 The user should enter the following command to display the string without preparing a file:
 
@@ -228,7 +228,11 @@ The user should enter the following command to display the string without prepar
 echo Hello, World!
 ```
 
-##### Display of the text string by entering the command to open a batch file
+##### Display of the text string by preparing a batch file and open it
+
+Batch files are usually created and edited in a text editor. However the user may also enter a string as the content of a batch file by entering command `copy con`. See [MicrosoftDocs](https://github.com/MicrosoftDocs)/[windowsserverdocs](https://github.com/MicrosoftDocs/windowsserverdocs) [#8067](https://github.com/MicrosoftDocs/windowsserverdocs/pull/8067) for more information.
+
+##### Display of the text string by entering a command to open a batch file having been prepared in this repository
 
 [Hello.bat][Hello] in this repository is a batch file desplaying the string in the console. However the user can find the console crash without seeing the string clearly if opening the file directly. To avoid such a situation, the user should open the file in a [command-line shell][command-line shell] in the following steps:
 
@@ -252,6 +256,10 @@ See the [official documentation related to this command](https://learn.microsoft
 
 ## References
 
+### Prasad, 2014
+
+PRASAD, Shishir [articles available from: https://www.forbesindia.com/author/shishir-prasad]. *Brian Kernighan: No one Thought C Would Become So Big*. *Forbes India*. Web page [online, HTML]. Updated. Mumbai, Network18 Media & Investments Limited. 2011-11-03 [updated on 2014-02-27]. Issue 2011-11-18. Copyright Network18 Media & Investments Limited. All rights reserved [2025-05-05]. [OCLC: 1458713602](https://search.worldcat.org/en/title/1458713602). https://www.forbesindia.com/interview/special/brian-kernighan-no-one-thought-c-would-become-so-big/29982/1.
+
 ### Roberts, 2016
 
 ROBERTS, Bucky [[GitHub](https://github.com) Account at: https://github.com/buckyroberts]. *Windows Command Line Tutorials*. Video list. Mountain View, California: Google LLC, 2016-01-10. YouTube, https://youtube.com/playlist?list=PL6gx4Cwl9DGDV6SnbINlVUd0o2xT4JbMu [also avaailable from https://www.bilibili.com/video/BV1Yb411H769]. [2025-05-07].
@@ -259,10 +267,6 @@ ROBERTS, Bucky [[GitHub](https://github.com) Account at: https://github.com/buck
 ### Wheeler, 2022
 
 WHEELER, Sean [[GitHub](https://github.com) Account at: https://github.com/sdwheeler]. *Installing Windows PowerShell*. 2022-10-25. Web page [Online, HTML]. *Previous versions of PowerShell* (available from: https://learn.microsoft.com/en-us/previous-versions/powershell/scripting). Microsoft Learn (available from: https://learn.microsoft.com). Microsoft Learn, https://learn.microsoft.com/previous-versions/powershell/scripting/windows-powershell/install/installing-windows-powershell.
-
-### Prasad, 2014
-
-PRASAD, Shishir [articles available from: https://www.forbesindia.com/author/shishir-prasad]. *Brian Kernighan: No one Thought C Would Become So Big*. *Forbes India*. Web page [online, HTML]. Updated. Mumbai, Network18 Media & Investments Limited. 2011-11-03 [updated on 2014-02-27]. Issue 2011-11-18. Copyright Network18 Media & Investments Limited. All rights reserved [2025-05-05]. [OCLC: 1458713602](https://search.worldcat.org/en/title/1458713602). https://www.forbesindia.com/interview/special/brian-kernighan-no-one-thought-c-would-become-so-big/29982/1.
 
 
 [command-line shell]: https://learn.microsoft.com/windows-server/administration/windows-commands/windows-commands#command-line-shells
