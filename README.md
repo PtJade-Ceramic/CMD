@@ -258,7 +258,11 @@ The user should enter the following command to display the code in [Hello.bat][H
 type Hello.bat
 ```
 
-See the [official documentation related to this command](https://learn.microsoft.com/windows-server/administration/windows-commands/type) for more information.
+See the [Microsoft Learn documentation related to this command](https://learn.microsoft.com/windows-server/administration/windows-commands/type) for more information.
+
+### PowerShell
+
+See [Windows PowerShell](Windows%20PowerShell.md).
 
 [command-line shell]: https://learn.microsoft.com/windows-server/administration/windows-commands/windows-commands#command-line-shells
 [creator]: https://github.com/PtJade-Ceramic
