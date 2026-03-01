@@ -14,7 +14,9 @@ Commands for Windows are derived from MS-DOS 1.0, [code of some of whose later v
 
 [The creator][creator] is not a native English writer, and is willing to listen to criticism on his writing and correct any grammar mistakes.
 
-Some content of this file is based on a [list of tutorials on Windows Command Line](https://www.youtube.com/playlist?list=PL6gx4Cwl9DGDV6SnbINlVUd0o2xT4JbMu) [(Roberts, 2016)](#roberts-2016) for which thanks should be said to the creator.
+Some content of this file is based on a [list of tutorials on Windows Command Line](https://www.youtube.com/playlist?list=PL6gx4Cwl9DGDV6SnbINlVUd0o2xT4JbMu)[^Roberts,2016] for which thanks should be said to the creator.
+
+[^Roberts,2016]: ROBERTS, Bucky [[GitHub](https://github.com) Account at: https://github.com/buckyroberts]. *Windows Command Line Tutorials*. Video list. Mountain View, California: Google LLC, 2016-01-10. YouTube, https://youtube.com/playlist?list=PL6gx4Cwl9DGDV6SnbINlVUd0o2xT4JbMu [also avaailable from https://www.bilibili.com/video/BV1Yb411H769]. [2025-05-07].
 
 The user should enter a command in a [command-line shell][command-line shell] in either of the following ways:
 
@@ -71,7 +73,9 @@ Start a command-line shell at:
 
 #### Ways
 
-PowerShell is installed by default on every Windows, starting with Windows 7 SP1 and Windows Server 2008 R2 SP1 [(Wheeler, 2022)](#wheeler-2022).
+PowerShell is installed by default on every Windows, starting with Windows 7 SP1 and Windows Server 2008 R2 SP1[^Wheeler,2022].
+
+[^Wheeler,2022]: WHEELER, Sean [[GitHub](https://github.com) Account at: https://github.com/sdwheeler]. *Installing Windows PowerShell*. 2022-10-25. Web page [Online, HTML]. *Previous versions of PowerShell* (available from: https://learn.microsoft.com/en-us/previous-versions/powershell/scripting). Microsoft Learn (available from: https://learn.microsoft.com). Microsoft Learn, https://learn.microsoft.com/previous-versions/powershell/scripting/windows-powershell/install/installing-windows-powershell.
 
 **Warning: The user can't fix an instance of this program on Windows by installing one in a way different from how the one to fix is installed because neither of them is equivalent.**
 
@@ -107,7 +111,7 @@ Enter the following command following the [*Command-Line Syntax Key*][Command-Li
 
 #### Starting another [command-line shell][command-line shell]
 
-[PowerShell][PowerShell] built in on Windows [(Wheeler, 2022)](#wheeler-2022) can be broken or [deleted](#deleting-1) if unable to run. Only as an administrator may the user fix it. However, fixing has to be by [entering commands also in a command-line shell](#fixing-also-in-an-instance-of-command-line-shell-1). Such a shell can be either Command Prompt or something else that can run.
+[PowerShell][PowerShell] built in on Windows[^Wheeler,2022] can be broken or [deleted](#deleting-1) if unable to run. Only as an administrator may the user fix it. However, fixing has to be by [entering commands also in a command-line shell](#fixing-also-in-an-instance-of-command-line-shell-1). Such a shell can be either Command Prompt or something else that can run.
 
 Command Prompt is built in for all versions of Windows. However, it can also be broken or [deleted](#deleting) if unable to run. For fixing the problem, it can be hard to start another [command-line shell][command-line shell] if the user can open neither this program nor another [command-line shell][command-line shell]. Only as an administrator may the user do this. It should be done by starting another instance of this program from an installation medium for the OS in the following steps:
 
@@ -117,7 +121,7 @@ Command Prompt is built in for all versions of Windows. However, it can also be 
 
 #### Fixing also in an instance of [command-line shell][command-line shell]
 
-Only as an administrator may the user fix [PowerShell][PowerShell] built in on Windows [(Wheeler, 2022)](#wheeler-2022) or Command Prompt. Such a user should do this in the following steps, in which the commands given have to be entered also in an instance of [command-line shell][command-line shell]. Such a shell should be started as [recommended](#starting-another-command-line-shell) if no instances of this program can be running as an administrator.
+Only as an administrator may the user fix [PowerShell][PowerShell] built in on Windows[^Wheeler,2022] or Command Prompt. Such a user should do this in the following steps, in which the commands given have to be entered also in an instance of [command-line shell][command-line shell]. Such a shell should be started as [recommended](#starting-another-command-line-shell) if no instances of this program can be running as an administrator.
 
 1. (Necessary if the user isn't sure about the integrity of the local image of the OS) Enter the following commands in sequence as an administrator [to keep the integrity of the local image of the OS](http://go.microsoft.com/fwlink/?LinkId=243077):
    ```cmd
@@ -214,7 +218,9 @@ See the [official documentation on related command](https://learn.microsoft.com/
 
 ##### To-display string classic for programming beginners
 
-The following string is classic for beginners to try to display by programming ([Prasad, 2014](#prasad-2014)).
+The following string is classic for beginners to try to display by programming[^Prasad,2014].
+
+[^Prasad,2014]: PRASAD, Shishir [articles available from: https://www.forbesindia.com/author/shishir-prasad]. *Brian Kernighan: No one Thought C Would Become So Big*. *Forbes India*. Web page [online, HTML]. Updated. Mumbai, Network18 Media & Investments Limited. 2011-11-03 [updated on 2014-02-27]. Issue 2011-11-18. Copyright Network18 Media & Investments Limited. All rights reserved [2025-05-05]. [OCLC: 1458713602](https://search.worldcat.org/en/title/1458713602). https://www.forbesindia.com/interview/special/brian-kernighan-no-one-thought-c-would-become-so-big/29982/1.
 
 ```
 Hello, World!
@@ -253,21 +259,6 @@ type Hello.bat
 ```
 
 See the [official documentation related to this command](https://learn.microsoft.com/windows-server/administration/windows-commands/type) for more information.
-
-## References
-
-### Prasad, 2014
-
-PRASAD, Shishir [articles available from: https://www.forbesindia.com/author/shishir-prasad]. *Brian Kernighan: No one Thought C Would Become So Big*. *Forbes India*. Web page [online, HTML]. Updated. Mumbai, Network18 Media & Investments Limited. 2011-11-03 [updated on 2014-02-27]. Issue 2011-11-18. Copyright Network18 Media & Investments Limited. All rights reserved [2025-05-05]. [OCLC: 1458713602](https://search.worldcat.org/en/title/1458713602). https://www.forbesindia.com/interview/special/brian-kernighan-no-one-thought-c-would-become-so-big/29982/1.
-
-### Roberts, 2016
-
-ROBERTS, Bucky [[GitHub](https://github.com) Account at: https://github.com/buckyroberts]. *Windows Command Line Tutorials*. Video list. Mountain View, California: Google LLC, 2016-01-10. YouTube, https://youtube.com/playlist?list=PL6gx4Cwl9DGDV6SnbINlVUd0o2xT4JbMu [also avaailable from https://www.bilibili.com/video/BV1Yb411H769]. [2025-05-07].
-
-### Wheeler, 2022
-
-WHEELER, Sean [[GitHub](https://github.com) Account at: https://github.com/sdwheeler]. *Installing Windows PowerShell*. 2022-10-25. Web page [Online, HTML]. *Previous versions of PowerShell* (available from: https://learn.microsoft.com/en-us/previous-versions/powershell/scripting). Microsoft Learn (available from: https://learn.microsoft.com). Microsoft Learn, https://learn.microsoft.com/previous-versions/powershell/scripting/windows-powershell/install/installing-windows-powershell.
-
 
 [command-line shell]: https://learn.microsoft.com/windows-server/administration/windows-commands/windows-commands#command-line-shells
 [creator]: https://github.com/PtJade-Ceramic
