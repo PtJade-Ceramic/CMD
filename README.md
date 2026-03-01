@@ -1,11 +1,7 @@
 # Programming practice — Windows Commands
-
 ## Foreword
-
 This document was drafted following the editorial rules of the [ISO/IEC Directives, Part 2](https://www.iso.org/directives) containing modifications, mostly simplification, not specified.
-
 ## Introduction
-
 Commands for Windows are derived from MS-DOS 1.0, [code of some of whose later versions has been reopened on GitHub](https://devblogs.microsoft.com/commandline/re-open-sourcing-ms-dos-1-25-and-2-0/).
 
 [PtJade Ceramic][creator] is exercising programming in [commands for Windows][command-line shell]. The code and documentation are in this repository for review and reference.
@@ -28,37 +24,26 @@ Some commands may only be run as an administrator. To do this, the user must sta
 ```
 PowerShell -Command "Start-Process cmd.exe -Verb RunAs"
 ```
-
 ## Scope
-
 This repository provides practice on programming in [commands for Windows][commands for Windows].
-
 ## Normative references
-
 The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.
 
 - [ISO/IEC 2382, _Information technology — Vocabulary_](https://www.iso.org/standard/63598.html)
 - [_Create installation media for Windows_](https://support.microsoft.com/windows/create-installation-media-for-windows-99a58364-8c02-206f-aa6f-40c3b507420d)
 - [_Windows commands_][commands for Windows]
 - [_PowerShell Documentation_][PowerShell]
-
 ## Terms and definitions
-
 For this document, the terms and definitions given in [ISO/IEC 2382](https://www.iso.org/standard/63598.html) and [Windows commands][commands for Windows] apply.
 
 ISO and IEC maintain terminology databases for use in standardization at the following addresses:
 
 - ISO Online browsing platform: available at https://www.iso.org/obp
 - IEC Electropedia: available at https://www.electropedia.org/
-
 ## Ways to install, start, and delete [command-line shells][command-line shell]
-
 ### Introduction of the command-line shells
-
 See [_Command-line shells_][command-line shell].
-
 ### Start
-
 Start a command-line shell at:
 - For Command Prompt:
    ```cmd
@@ -68,16 +53,14 @@ Start a command-line shell at:
    ```cmd
    %SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe
    ```
-
 ### Installation of PowerShell
-
 #### Ways
-
 PowerShell is installed by default on every Windows, starting with Windows 7 SP1 and Windows Server 2008 R2 SP1[^Wheeler,2022].
 
 [^Wheeler,2022]: WHEELER, Sean [[GitHub](https://github.com) Account at: https://github.com/sdwheeler]. *Installing Windows PowerShell*. 2022-10-25. Web page [Online, HTML]. *Previous versions of PowerShell* (available from: https://learn.microsoft.com/en-us/previous-versions/powershell/scripting). Microsoft Learn (available from: https://learn.microsoft.com). Microsoft Learn, https://learn.microsoft.com/previous-versions/powershell/scripting/windows-powershell/install/installing-windows-powershell.
 
-**Warning: The user can't fix an instance of this program on Windows by installing one in a way different from how the one to fix is installed because neither of them is equivalent.**
+> [!CAUTION]
+> The user can't fix an instance of this program on Windows by installing one in a way different from how the one to fix is installed because neither of them is equivalent.
 
 See [_Installing Windows PowerShell_][install Windows PowerShell] to install this program on Windows.
 
@@ -115,7 +98,9 @@ Enter the following command following the [*Command-Line Syntax Key*][Command-Li
 
 Command Prompt is built in for all versions of Windows. However, it can also be broken or [deleted](#deleting) if unable to run. For fixing the problem, it can be hard to start another [command-line shell][command-line shell] if the user can open neither this program nor another [command-line shell][command-line shell]. Only as an administrator may the user do this. It should be done by starting another instance of this program from an installation medium for the OS in the following steps:
 
-1. (Necessary if the user doesn't have an installation medium for the OS or isn't sure about the integrity of what he has) [Create installation media for the OS](https://support.microsoft.com/en-us/windows/create-installation-media-for-windows-99a58364-8c02-206f-aa6f-40c3b507420d).
+1. [Create installation media for the OS](https://support.microsoft.com/en-us/windows/create-installation-media-for-windows-99a58364-8c02-206f-aa6f-40c3b507420d).
+> [!TIP]
+> This step is necessary if the user doesn't have an installation medium for the OS or isn't sure about the integrity of what he has
 2. Keep the installation medium plugged in and go to `Settings` > `Windows Update` > `Advanced options` > (in `Others`) `Recovery` > (in `Recovery options` > `Advanced recovery`) `Reboot immediately`.
 3. In the reboot page, click `Fix this computer` > `Command Prompt`.
 
@@ -123,16 +108,20 @@ Command Prompt is built in for all versions of Windows. However, it can also be 
 
 Only as an administrator may the user fix [PowerShell][PowerShell] built in on Windows[^Wheeler,2022] or Command Prompt. Such a user should do this in the following steps, in which the commands given have to be entered also in an instance of [command-line shell][command-line shell]. Such a shell should be started as [recommended](#starting-another-command-line-shell) if no instances of this program can be running as an administrator.
 
-1. (Necessary if the user isn't sure about the integrity of the local image of the OS) Enter the following commands in sequence as an administrator [to keep the integrity of the local image of the OS](http://go.microsoft.com/fwlink/?LinkId=243077):
+1. Enter the following commands in sequence as an administrator [to keep the integrity of the local image of the OS](http://go.microsoft.com/fwlink/?LinkId=243077):
    ```cmd
    DISM.exe /Online /Cleanup-Image /CheckHealth
    DISM.exe /Online /Cleanup-Image /ScanHealth
    DISM.exe /Online /Cleanup-Image /RestoreHealth
    ```
-2. (Necessary if the user isn't sure about the absolute directory of the OS) enter the following command to display the absolute directory of the OS, and copy it manually:
+> [!TIP]
+> This step is necessary if the user isn't sure about the integrity of the local image of the OS.
+2. Enter the following command to display the absolute directory of the OS, and copy it manually:
    ```cmd
    echo %windir%
    ```
+> [!TIP]
+> This step is necessary if the user isn't sure about the absolute directory of the OS.
 3. Enter the following command [to verify the integrity](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/sfc) of the [command-line shell][command-line shell] to fix with `<%windir%>`, following the [*Command-Line Syntax Key*][Command-Line Syntax Key], replaced with the absolute directory of the OS, copied in last step if the user isn't sure about it:
    - For Command Prompt:
       ```cmd
@@ -159,7 +148,8 @@ Only as an administrator may the user fix [PowerShell][PowerShell] built in on W
 
 ### Deletion
 
-**Warning: Neither [PowerShell][PowerShell] built in on Windows nor Command Prompt can be recovered from the [Recycle Bin][recycle] if deleted in the following way. A command-line shell is relied on many processes. Don't do this.**
+> [!CAUTION]
+> Neither [PowerShell][PowerShell] built in on Windows nor Command Prompt can be recovered from the [Recycle Bin][recycle] if deleted in the following way. A command-line shell is relied on many processes. Don't do this.
 
 Try [fixing a command-line shell](#fixing) if something is wrong with it.
 
@@ -175,15 +165,14 @@ It is deprecated to delete either of the [command-line shells][command-line shel
    ```cmd
    icacls <commandlineshell> /grant <username>:F
    ```
-5. **(Warning: The [command-line shell][command-line shell] can't be recovered from the [Recycle Bin][recycle] if deleted)** Enter the following command to delete the [desired command-line shell]:
+> [!CAUTION]
+> The [command-line shell][command-line shell] can't be recovered from the [Recycle Bin][recycle] if deleted.
+5. Enter the following command to delete the [desired command-line shell]:
    ```cmd
    del <commandlineshell>
    ```
-
 ## Programming practices
-
 ### Folder management
-
 The following table illustrates commands used to manage folders.
 
 | Command | Meaning | Usage |
