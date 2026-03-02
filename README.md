@@ -2,7 +2,7 @@
 ## Foreword
 This document was drafted following the editorial rules of the [ISO/IEC Directives, Part 2](https://www.iso.org/directives) containing modifications, mostly simplification, not specified.
 ## Introduction
-Commands for Windows are derived from MS-DOS 1.0, [code of some of whose later versions has been reopened on GitHub](https://devblogs.microsoft.com/commandline/re-open-sourcing-ms-dos-1-25-and-2-0/).
+Commands for Windows are derived from MS-DOS 1.0, source code of some of whose later versions has been [reopened on GitHub](https://devblogs.microsoft.com/commandline/re-open-sourcing-ms-dos-1-25-and-2-0/).
 
 [PtJade Ceramic][creator] is exercising programming in [commands for Windows][command-line shell]. The code and documentation are in this repository for review and reference.
 
@@ -10,9 +10,9 @@ Commands for Windows are derived from MS-DOS 1.0, [code of some of whose later v
 
 [The creator][creator] is not a native English writer, and is willing to listen to criticism on his writing and correct any grammar mistakes.
 
-Some content of this file is based on a [list of tutorials on Windows Command Line](https://www.youtube.com/playlist?list=PL6gx4Cwl9DGDV6SnbINlVUd0o2xT4JbMu)[^Roberts,2016] for which thanks should be said to the creator.
+Some content of this file is based on a [list of tutorials on Windows Command Line](https://www.youtube.com/playlist?list=PL6gx4Cwl9DGDV6SnbINlVUd0o2xT4JbMu)[^Roberts,%202016] for which thanks should be said to the creator.
 
-[^Roberts,2016]: ROBERTS, Bucky [[GitHub](https://github.com) Account at: https://github.com/buckyroberts]. *Windows Command Line Tutorials*. Video list. Mountain View, California: Google LLC, 2016-01-10. YouTube, https://youtube.com/playlist?list=PL6gx4Cwl9DGDV6SnbINlVUd0o2xT4JbMu [also avaailable from https://www.bilibili.com/video/BV1Yb411H769]. [2025-05-07].
+[^Roberts,%202016]: ROBERTS, Bucky [[GitHub](https://github.com) Account at: https://github.com/buckyroberts]. *Windows Command Line Tutorials*. Video list. Mountain View, California: Google LLC, 2016-01-10. YouTube, https://youtube.com/playlist?list=PL6gx4Cwl9DGDV6SnbINlVUd0o2xT4JbMu [also avaailable from https://www.bilibili.com/video/BV1Yb411H769]. [2025-05-07].
 
 The user should enter a command in a [command-line shell][command-line shell] in either of the following ways:
 
@@ -25,21 +25,21 @@ Some commands may only be run as an administrator. To do this, the user must sta
 PowerShell -Command "Start-Process cmd.exe -Verb RunAs"
 ```
 ## Scope
-This repository provides practice on programming in [commands for Windows][commands for Windows].
+This repository provides practice on programming in [command-line shells especially for Windows][commands for Windows].
 ## Normative references
 The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.
 
-- [ISO/IEC 2382, _Information technology — Vocabulary_](https://www.iso.org/standard/63598.html)
-- [_Create installation media for Windows_](https://support.microsoft.com/windows/create-installation-media-for-windows-99a58364-8c02-206f-aa6f-40c3b507420d)
+- [ISO/IEC 2382, _Information technology — Vocabulary_][ISO 2382]
+- [_Create installation media for Windows_][Windows installation media]
 - [_Windows commands_][commands for Windows]
 - [_PowerShell Documentation_][PowerShell]
 ## Terms and definitions
-For this document, the terms and definitions given in [ISO/IEC 2382](https://www.iso.org/standard/63598.html) and [Windows commands][commands for Windows] apply.
+For this document, the terms and definitions given in [ISO/IEC 2382][ISO 2382] and [Windows commands][commands for Windows] apply.
 
 ISO and IEC maintain terminology databases for use in standardization at the following addresses:
 
 - ISO Online browsing platform: available at https://www.iso.org/obp
-- IEC Electropedia: available at https://www.electropedia.org/
+- IEC Electropedia: available at https://www.electropedia.org
 ## Ways to install, start, and delete [command-line shells][command-line shell]
 ### Introduction of the command-line shells
 See [_Command-line shells_][command-line shell].
@@ -55,9 +55,9 @@ Start a command-line shell at:
    ```
 ### Installation of PowerShell
 #### Ways
-PowerShell is installed by default on every Windows, starting with Windows 7 SP1 and Windows Server 2008 R2 SP1[^Wheeler,2022].
+PowerShell is installed by default on every Windows, starting with Windows 7 SP1 and Windows Server 2008 R2 SP1[^Wheeler,%202022].
 
-[^Wheeler,2022]: WHEELER, Sean [[GitHub](https://github.com) Account at: https://github.com/sdwheeler]. *Installing Windows PowerShell*. 2022-10-25. Web page [Online, HTML]. *Previous versions of PowerShell* (available from: https://learn.microsoft.com/en-us/previous-versions/powershell/scripting). Microsoft Learn (available from: https://learn.microsoft.com). Microsoft Learn, https://learn.microsoft.com/previous-versions/powershell/scripting/windows-powershell/install/installing-windows-powershell.
+[^Wheeler,%202022]: WHEELER, Sean [[GitHub](https://github.com) Account at: https://github.com/sdwheeler]. *Installing Windows PowerShell*. 2022-10-25. Web page [Online, HTML]. *Previous versions of PowerShell* (available from: https://learn.microsoft.com/en-us/previous-versions/powershell/scripting). Microsoft Learn (available from: https://learn.microsoft.com). Microsoft Learn, https://learn.microsoft.com/previous-versions/powershell/scripting/windows-powershell/install/installing-windows-powershell.
 
 > [!CAUTION]
 > The user can't fix an instance of this program on Windows by installing one in a way different from how the one to fix is installed because neither of them is equivalent.
@@ -89,17 +89,17 @@ Get-Help <command> -Online
 ```
 ### Fixing
 #### Starting another [command-line shell][command-line shell]
-[PowerShell][PowerShell] built in on Windows[^Wheeler,2022] can be broken or [deleted](#deleting-1) if unable to run. Only as an administrator may the user fix it. However, fixing has to be by [entering commands also in a command-line shell](#fixing-also-in-an-instance-of-command-line-shell-1). Such a shell can be either Command Prompt or something else that can run.
+[PowerShell][PowerShell] built in on Windows[^Wheeler,%202022] can be broken or [deleted](#deleting-1) if unable to run. Only as an administrator may the user fix it. However, fixing has to be by [entering commands also in a command-line shell](#fixing-also-in-an-instance-of-command-line-shell-1). Such a shell can be either Command Prompt or something else that can run.
 
 Command Prompt is built in for all versions of Windows. However, it can also be broken or [deleted](#deleting) if unable to run. For fixing the problem, it can be hard to start another [command-line shell][command-line shell] if the user can open neither this program nor another [command-line shell][command-line shell]. Only as an administrator may the user do this. It should be done by starting another instance of this program from an installation medium for the OS in the following steps:
 
-1. [Create installation media for the OS](https://support.microsoft.com/en-us/windows/create-installation-media-for-windows-99a58364-8c02-206f-aa6f-40c3b507420d).
+1. [Create installation media for the OS][Windows installation media].
 > [!TIP]
 > This step is necessary if the user doesn't have an installation medium for the OS or isn't sure about the integrity of what he has
 2. Keep the installation medium plugged in and go to `Settings` > `Windows Update` > `Advanced options` > (in `Others`) `Recovery` > (in `Recovery options` > `Advanced recovery`) `Reboot immediately`.
 3. In the reboot page, click `Fix this computer` > `Command Prompt`.
 #### Fixing also in an instance of [command-line shell][command-line shell]
-Only as an administrator may the user fix [PowerShell][PowerShell] built in on Windows[^Wheeler,2022] or Command Prompt. Such a user should do this in the following steps, in which the commands given have to be entered also in an instance of [command-line shell][command-line shell]. Such a shell should be started as [recommended](#starting-another-command-line-shell) if no instances of this program can be running as an administrator.
+Only as an administrator may the user fix [PowerShell][PowerShell] built in on Windows[^Wheeler,%202022] or Command Prompt. Such a user should do this in the following steps, in which the commands given have to be entered also in an instance of [command-line shell][command-line shell]. Such a shell should be started as [recommended](#starting-another-command-line-shell) if no instances of this program can be running as an administrator.
 
 1. Enter the following commands in sequence as an administrator [to keep the integrity of the local image of the OS](http://go.microsoft.com/fwlink/?LinkId=243077):
    ```cmd
@@ -187,9 +187,9 @@ cls
 See the [official documentation on related command](https://learn.microsoft.com/windows-server/administration/windows-commands/echo) for turning on or off  and checking the state of the command echoing feature.
 #### Display of a spesific string
 ##### To-display string classic for programming beginners
-The following string is classic for beginners to try to display by programming[^Prasad,2014].
+The following string is classic for beginners to try to display by programming[^Prasad,%202014].
 
-[^Prasad,2014]: PRASAD, Shishir [articles available from: https://www.forbesindia.com/author/shishir-prasad]. *Brian Kernighan: No one Thought C Would Become So Big*. *Forbes India*. Web page [online, HTML]. Updated. Mumbai, Network18 Media & Investments Limited. 2011-11-03 [updated on 2014-02-27]. Issue 2011-11-18. Copyright Network18 Media & Investments Limited. All rights reserved [2025-05-05]. [OCLC: 1458713602](https://search.worldcat.org/en/title/1458713602). https://www.forbesindia.com/interview/special/brian-kernighan-no-one-thought-c-would-become-so-big/29982/1.
+[^Prasad,%202014]: PRASAD, Shishir [articles available from: https://www.forbesindia.com/author/shishir-prasad]. *Brian Kernighan: No one Thought C Would Become So Big*. *Forbes India*. Web page [online, HTML]. Updated. Mumbai, Network18 Media & Investments Limited. 2011-11-03 [updated on 2014-02-27]. Issue 2011-11-18. Copyright Network18 Media & Investments Limited. All rights reserved [2025-05-05]. [OCLC: 1458713602](https://search.worldcat.org/en/title/1458713602). https://www.forbesindia.com/interview/special/brian-kernighan-no-one-thought-c-would-become-so-big/29982/1.
 
 ```
 Hello, World!
@@ -229,5 +229,7 @@ See [Windows PowerShell](Windows%20PowerShell.md).
 [install Windows PowerShell]: https://learn.microsoft.com/powershell/scripting/windows-powershell/install/installing-windows-powershell
 [PowerShell]: https://learn.microsoft.com/powershell
 [Command-Line Syntax Key]: https://learn.microsoft.com/windows-server/administration/windows-commands/command-line-syntax-key
+[ISO 2382]: https://www.iso.org/standard/63598.html
 [Hello]: Hello.bat
 [recycle]: https://support.microsoft.com/windows/find-the-recycle-bin-in-windows-885cf298-0f98-a548-9427-a1248fce4315
+[Windows installation media]: https://support.microsoft.com/windows/create-installation-media-for-windows-99a58364-8c02-206f-aa6f-40c3b507420d
