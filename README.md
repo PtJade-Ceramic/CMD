@@ -17,7 +17,7 @@ Some content of this file is based on a [list of tutorials on Windows Command Li
 The user should enter a command in a [command-line shell][command-line shell] in either of the following ways:
 
 - Type the command and press Enter; or
-- Paste the command followed by a carriage return defined by [ISO/IEC 6429](https://www.iso.org/standard/12782.html).
+- Paste the command followed by a carriage return defined by [ISO/IEC 6429](https://www.iso.org/standard/12780.html).
 
 Some commands may only be run as an administrator. To do this, the user must start another process, also an instance of a [command-line shell][command-line shell], as an administrator if the current one hasn't been run as an administrator by entering the following command if the new one is Command Prompt, for example, and PowerShell has been installed:
 
@@ -42,41 +42,15 @@ ISO and IEC maintain terminology databases for use in standardization at the fol
 - IEC Electropedia: available at https://www.electropedia.org
 ## Ways to install, start, and delete [command-line shells][command-line shell]
 ### Introduction of the command-line shells
-See [_Command-line shells_][command-line shell].
+See [Windows Terminal documentation](https://learn.microsoft.com/windows/terminal/).
 ### Start
-Start a command-line shell at:
-- For Command Prompt:
+Start Command Prompt at:
    ```cmd
    %windir%\System32\cmd.exe
    ```
-- For PowerShell:
-   ```cmd
-   %SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe
-   ```
-### Installation of PowerShell
-#### Ways
-PowerShell is installed by default on every Windows, starting with Windows 7 SP1 and Windows Server 2008 R2 SP1[^Wheeler,%202022].
-
-[^Wheeler,%202022]: WHEELER, Sean [[GitHub](https://github.com) Account at: https://github.com/sdwheeler]. *Installing Windows PowerShell*. 2022-10-25. Web page [Online, HTML]. *Previous versions of PowerShell* (available from: https://learn.microsoft.com/en-us/previous-versions/powershell/scripting). Microsoft Learn (available from: https://learn.microsoft.com). Microsoft Learn, https://learn.microsoft.com/previous-versions/powershell/scripting/windows-powershell/install/installing-windows-powershell.
-
-> [!CAUTION]
-> The user can't fix an instance of this program on Windows by installing one in a way different from how the one to fix is installed because neither of them is equivalent.
-
-See [_Installing Windows PowerShell_][install Windows PowerShell] to install this program on Windows.
-
-The user may also [install this program on Linux and macOS](https://learn.microsoft.com/powershell/scripting/install/installing-powershell).
-#### Differences among [ways on Windows][install Windows PowerShell]
-The following table illustrates how instances of this program installed on Windows in ways other than that done by default are equivalent to neither each other nor the default one.
-
-Way|Installed location
----|------------------
-[WinGet](https://learn.microsoft.com/powershell/scripting/install/installing-powershell-on-windows#winget)|`"%ProgramFiles%\PowerShell\<version>\pwsh.exe" -WorkingDirectory ~`
-[MSI](https://learn.microsoft.com/powershell/scripting/install/installing-powershell-on-windows#msi)|`%ProgramFiles%\PowerShell\PowerShell` by default but can be changed
-[ZIP](https://learn.microsoft.com/powershell/scripting/install/installing-powershell-on-windows#zip)|`<unzip>\PowerShell-<version>-<platform>\pwsh.exe` in which `<unzip>` is the location the user chooses to unzip the package to and `<version>` and `<platform>` are the installed version of and the platform on which running this program
-[.NET](https://learn.microsoft.com/powershell/scripting/install/installing-powershell-on-windows#dotnet)|`$HOME\.dotnet\tools\pwsh.exe`
-[Microsoft Store](https://learn.microsoft.com/powershell/scripting/install/installing-powershell-on-windows#msstore)|Sandbox
+[^Wheeler,%202022]: WHEELER, Sean [[GitHub](https://github.com) Account at: https://github.com/sdwheeler]. *Installing Windows PowerShell*. 2022-10-25. Web page [Online, HTML]. Microsoft Learn, https://learn.microsoft.com/previous-versions/powershell/scripting/windows-powershell/install/installing-windows-powershell.
 ### Automatic completion of file and directory names in command shells
-See the [official documentation](https://learn.microsoft.com/windows-server/administration/windows-commands/windows-commands#command-shell-file-and-directory-name-automatic-completion) to configure the specified control character entered in the [command-line shell][command-line shell] to automatically complete names of file and directory on a computer or user session.
+See the [documentation](https://learn.microsoft.com/windows-server/administration/windows-commands/windows-commands#command-shell-file-and-directory-name-automatic-completion) to configure the specified control character entered in the [command-line shell][command-line shell] to automatically complete names of file and directory on a computer or user session.
 ### Help
 Enter the following command following the [_Command-Line Syntax Key_][Command-Line Syntax Key] to get help for a specific `<command>`:
 
@@ -84,9 +58,6 @@ Enter the following command following the [_Command-Line Syntax Key_][Command-Li
 <command> /?
 ```
 
-```PowerShell
-Get-Help <command> -Online
-```
 ### Fixing
 #### Starting another [command-line shell][command-line shell]
 [PowerShell][PowerShell] built in on Windows[^Wheeler,%202022] can be broken or [deleted](#deleting-1) if unable to run. Only as an administrator may the user fix it. However, fixing has to be by [entering commands also in a command-line shell](#fixing-also-in-an-instance-of-command-line-shell-1). Such a shell can be either Command Prompt or something else that can run.
@@ -172,8 +143,8 @@ Command|Meaning|Usage
 `md` \| `mkdir`|Make a directory|[Create a directory or subdirectory](https://learn.microsoft.com/windows-server/administration/windows-commands/md)
 `rd` \| `rmdir`|Remove a directory|[Delete a directory](https://learn.microsoft.com/windows-server/administration/windows-commands/rd)
 `tree`|Tree|[Display the directory structure of a path or of the disk in a drive graphically](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tree)
-`path`|Path|[Set the command path in the PATH environment variable, specifying the set of directories used to search for executable (`*.exe`) files](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/path)
-`wmic`|[WMI](https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/07-working-with-wmi?view=powershell-7.5) command|[Displays WMI information inside an interactive command shell](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/wmic)
+`path`|Path|[Set the command path in the PATH environment variable, specifying the set of directories used to search for executable (`*.exe`) files](https://learn.microsoft.com/windows-server/administration/windows-commands/path)
+`wmic`|[WMI](https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/07-working-with-wmi?view=powershell-7.5) command|[Displays WMI information inside an interactive command shell](https://learn.microsoft.com/windows-server/administration/windows-commands/wmic)
 ### Colors of the foreground and background in the Command Prompt window
 The user may enter command `color` to [change the foreground and background colors in the Command Prompt window for the current session](https://learn.microsoft.com/windows-server/administration/windows-commands/color).
 ### Display of text
@@ -219,7 +190,7 @@ The user should enter the following command to display the code in [Hello.bat][H
 type Hello.bat
 ```
 
-See the [Microsoft Learn documentation related to this command](https://learn.microsoft.com/windows-server/administration/windows-commands/type) for more information.
+See the [Microsoft documentation related to this command](https://learn.microsoft.com/windows-server/administration/windows-commands/type) for more information.
 ### PowerShell
 See [Windows PowerShell](Windows%20PowerShell.md).
 
@@ -229,7 +200,7 @@ See [Windows PowerShell](Windows%20PowerShell.md).
 [install Windows PowerShell]: https://learn.microsoft.com/powershell/scripting/windows-powershell/install/installing-windows-powershell
 [PowerShell]: https://learn.microsoft.com/powershell
 [Command-Line Syntax Key]: https://learn.microsoft.com/windows-server/administration/windows-commands/command-line-syntax-key
-[ISO 2382]: https://www.iso.org/standard/63598.html
+[ISO 2382]: https://www.iso.org/standard/7227.html
 [Hello]: Hello.bat
 [recycle]: https://support.microsoft.com/windows/find-the-recycle-bin-in-windows-885cf298-0f98-a548-9427-a1248fce4315
 [Windows installation media]: https://support.microsoft.com/windows/create-installation-media-for-windows-99a58364-8c02-206f-aa6f-40c3b507420d
