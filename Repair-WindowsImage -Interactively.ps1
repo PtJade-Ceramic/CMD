@@ -5,8 +5,8 @@ while (-not $health.Online) {
     Write-Host 'Windows Image is offline. Please restore your Internet connection.' -ForegroundColor Yellow
     Start-Process 'ms-gethelp:'
     $choices = 'Retry', 'Skip'
-    $choice = Read-Host ($choices | ForEach-Object { -join ('[', $_[0] + '] ', "$_") } -join "`r`n")
-    if ($choice -eq 'S') { break }
+    $choice = Read-Host (($choices | ForEach-Object { -join ('[', $_[0] + '] ', "$_") }) -join "`r`n")
+    if ($choice -ilike "$('Skip'[0])*") { break }
     & $command
 }
 if ($health.ImageHealthState -eq 'Healthy') { Write-Host "Windows Image is healthy. No further action required." -ForegroundColor Green }
